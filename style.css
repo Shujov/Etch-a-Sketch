@@ -9,7 +9,8 @@ body{
 
 .canvas{
     border: 1px solid black;
-    width: 95%;
+    height: 75vh;
+    aspect-ratio: 1 / 1;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
