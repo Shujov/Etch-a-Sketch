@@ -1,0 +1,23 @@
+
+:root {
+    --squareBasis: 50%;
+}
+
+body{
+    text-align: center;
+}
+
+.canvas{
+    border: 1px solid black;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.square {
+    margin: 0px;
+    flex-basis: var(--squareBasis);
+    aspect-ratio: 1 / 1;
+}
