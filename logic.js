@@ -27,5 +27,7 @@ function reInitializeGrid(){
     initializeGrid(this.value);
 }
 
+document.querySelector("input").value = 16;
 initializeGrid(16); // The default grid is 16x16
+
 document.querySelector("#numSquares").addEventListener("change", reInitializeGrid);
