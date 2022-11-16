@@ -21,3 +21,9 @@ body{
     flex-basis: var(--squareBasis);
     aspect-ratio: 1 / 1;
 }
+
+/*
+.square:hover{
+    background-color: black;
+}
+*/

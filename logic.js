@@ -19,7 +19,16 @@ function setWidthSquares(numSquares){
 
 const gridSize = 16 
 
+// 1. Initialization of the grid
 setWidthSquares(gridSize);
-
 addSquares(gridSize**2);
+
+
+// 2. Listening for the mouse moves to do the painting
+function paintSquare(){
+    this.style.backgroundColor = "black";
+}
+
+const squares = document.querySelectorAll(".square").forEach(square => square.addEventListener("mouseover", paintSquare));
+
 
