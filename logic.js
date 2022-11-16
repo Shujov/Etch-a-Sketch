@@ -6,29 +6,26 @@ function addSquares(numSquares){
     for (let i = 0; i < numSquares; i++) {
         const square = document.createElement("div");
         square.classList.add("square");
+        square.onmouseover = function(){this.style.backgroundColor = "black"};
         canvas.appendChild(square);
     }
 
 }
 
 function setWidthSquares(numSquares){
-
     document.documentElement.style.setProperty("--squareBasis" , (100/numSquares) + "%");
-
 }
 
-const gridSize = 16 
 
-// 1. Initialization of the grid
-setWidthSquares(gridSize);
-addSquares(gridSize**2);
-
-
-// 2. Listening for the mouse moves to do the painting
-function paintSquare(){
-    this.style.backgroundColor = "black";
+function initializeGrid(gridSize){
+    setWidthSquares(gridSize);
+    addSquares(gridSize**2);
 }
 
-const squares = document.querySelectorAll(".square").forEach(square => square.addEventListener("mouseover", paintSquare));
+function reInitializeGrid(){
+    document.querySelector(".canvas").innerHTML = "";
+    initializeGrid(this.value);
+}
 
-
+initializeGrid(16); // The default grid is 16x16
+document.querySelector("#numSquares").addEventListener("change", reInitializeGrid);
